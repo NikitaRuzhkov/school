@@ -1,11 +1,119 @@
 @import 'vars';
 @import 'fonts';
 @import 'reset';
+@import 'libs';
 @import 'global';
+
+
+
+.header {
+  padding: 25px 10px;
+
+  &__inner {
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    justify-content: space-between;
+  }
+
+  &__logo {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+  }
+
+  &__info {
+    display: flex;
+    align-items: center;
+    justify-content: end;
+    gap: 48px;
+    margin-bottom: 12px;
+    font-size: 18px;
+    line-height: 26px;
+
+  }
+
+  &__tel {
+    color: $accent;
+  }
+
+  &__info-link {
+    color: $accent;
+    position: relative;
+
+    &::after {
+      position: absolute;
+      content: '';
+      width: 22px;
+      height: 26px;
+      top: -3px;
+      right: -23px;
+      background-image: url('../images/icons/arrow-menu.svg');
+    }
+  }
+
+
+  &__link {
+    padding-left: 26px;
+    color: $accent;
+  }
+
+  &__menu {
+    display: flex;
+    gap: 150px;
+    padding: 7px 0 7px 36px;
+    border: 1px solid $accent;
+    border-right: none;
+    border-top-left-radius: 30px;
+    border-bottom-left-radius: 30px;
+  }
+
+  &__menu-list {
+    display: flex;
+    align-items: center;
+    gap: 48px;
+
+  }
+  &__menu-link{
+    font-size: 18px;
+    color: $accent;
+    position: relative;
+    
+      &::after {
+        position: absolute;
+        content: '';
+        width: 22px;
+        height: 26px;
+        top: -3px;
+        right: -25px;
+        background-image: url('../images/icons/arrow-menu.svg');
+      }
+  }
+
+  &__btn {
+    border: none;
+    background-color: $main;
+    color: #fff;
+    padding: 10px 24px;
+    border-radius: 25px;
+    @extend %roboto-700;
+    font-size: 18px;
+    cursor: pointer;
+    position: relative;
+
+    &::after {
+      content: '';
+      position: absolute;
+      height: 1px;
+      width: 242px;
+      background-color: #fff;
+      bottom: -8px;
+      left: -90px;
+    }
+  }
+}
 
 
 
 
 @import 'media';
-
-
