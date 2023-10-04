@@ -9,6 +9,54 @@
 .header {
   padding: 25px 10px;
 
+  &__logo-img-one {
+    display: none;
+  }
+
+  &__wrapper {
+    .header__tel {
+      color: #fff;
+      ;
+    }
+
+    .header__info-link {
+      color: #fff;
+
+      svg {
+        path {
+          fill: #fff;
+        }
+      }
+    }
+
+    .header__link {
+      color: #fff;
+    }
+
+    .header__menu {
+      border: 1px solid #fff;
+      border-right: none;
+    }
+
+    .header__menu-link {
+      color: #fff;
+
+      svg {
+        path {
+          fill: #fff;
+        }
+      }
+    }
+
+    .header__logo-img {
+      display: none;
+    }
+
+    .header__logo-img-one {
+      display: block;
+    }
+  }
+
   &__inner {
     display: flex;
     align-items: center;
@@ -35,27 +83,52 @@
 
   &__tel {
     color: $accent;
+
+    &:hover {
+      color: $main;
+      transition: all .3s;
+    }
   }
+
 
   &__info-link {
     color: $accent;
     position: relative;
+    display: flex;
+    align-items: center;
 
-    &::after {
-      position: absolute;
-      content: '';
-      width: 22px;
-      height: 26px;
-      top: -3px;
-      right: -23px;
-      background-image: url('../images/icons/arrow-menu.svg');
+    &:hover {
+      color: $main;
+      transition: all .3s;
+
+      svg {
+        path {
+          fill: $main;
+          transition: all .3s;
+        }
+      }
     }
+
+    // &::after {
+    //   position: absolute;
+    //   content: '';
+    //   width: 22px;
+    //   height: 26px;
+    //   top: -3px;
+    //   right: -23px;
+    //   background-image: url('../images/icons/arrow-menu.svg');
+    // }
   }
 
 
   &__link {
     padding-left: 26px;
     color: $accent;
+
+    &:hover {
+      color: $main;
+      transition: all .3s;
+    }
   }
 
   &__menu {
@@ -68,27 +141,74 @@
     border-bottom-left-radius: 30px;
   }
 
+  &__about {
+    position: absolute;
+    top: 50px;
+    left: -2px;
+    background-color: $main;
+    border-radius: 15px;
+    padding: 20px 32px 15px 24px !important;
+    transform: translateY(-500%);
+    transition: all .3s;
+    z-index: 10;
+  }
+
+  &__about--active {
+    transform: translateY(0);
+    transition: all .3s;
+  }
+
+  &__about-item {
+    margin-bottom: 15px;
+  }
+
+  &__about-link {
+    color: #fff;
+
+    &:hover {
+      padding-bottom: 5px;
+      border-bottom: 1px solid #fff;
+    }
+  }
+
+
+
   &__menu-list {
     display: flex;
     align-items: center;
     gap: 48px;
+    position: relative;
 
   }
-  &__menu-link{
+
+  &__menu-link {
     font-size: 18px;
+    display: flex;
+    align-items: center;
+    gap: 10px;
     color: $accent;
     position: relative;
-    
-      &::after {
-        position: absolute;
-        content: '';
-        width: 22px;
-        height: 26px;
-        top: -3px;
-        right: -25px;
-        background-image: url('../images/icons/arrow-menu.svg');
-      }
+
+    &:hover {
+      background-color: $main;
+      color: white;
+      padding: 7px 20px;
+      border-radius: 25px;
+      transition: all .3s;
+    }
+
+    // &::after {
+    //   position: absolute;
+    //   content: '';
+    //   width: 22px;
+    //   height: 26px;
+    //   top: -3px;
+    //   right: -25px;
+    //   background-image: url('../images/icons/arrow-menu.svg');
+    // }
   }
+
+
 
   &__btn {
     border: none;
@@ -112,6 +232,62 @@
     }
   }
 }
+
+
+
+.about {
+  margin-top: -145px;
+  background-image: url('../images/header-bg1.png');
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+
+  &__inner {
+    padding-top: 333px;
+    padding-bottom: 140px;
+    color: #fff;
+  }
+
+  &__box {
+    @extend %roboto-500;
+    font-size: 22px;
+    display: flex;
+    gap: 75px;
+    margin-bottom: 50px;
+  }
+
+  &__title {
+    @extend %impact;
+    font-size: 76px;
+    width: 750px;
+    margin-bottom: 32px;
+  }
+
+  &__text {
+    width: 400px;
+    line-height: 21px;
+    margin-bottom: 50px;
+  }
+
+  &__link {
+    background-color: $main;
+    color: #fff;
+    padding: 16px 32px;
+    border-radius: 25px;
+    @extend %roboto-700;
+    font-size: 18px;
+
+    svg {
+      margin-left: 15px;
+    }
+  }
+
+}
+
+
+
+
+
 
 
 
