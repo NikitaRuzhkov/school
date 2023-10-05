@@ -141,6 +141,49 @@
     border-bottom-left-radius: 30px;
   }
 
+  &__school {
+    position: absolute;
+    top: 50px;
+    left: 145px;
+    background-color: $main;
+    border-radius: 15px;
+    padding: 20px 32px 15px 24px !important;
+    transform: translateY(-500%);
+    transition: all .3s;
+    z-index: 10;
+  }
+
+  &__services {
+    position: absolute;
+    top: 50px;
+    left: 330px;
+    background-color: $main;
+    border-radius: 15px;
+    padding: 20px 32px 15px 24px !important;
+    transform: translateY(-500%);
+    transition: all .3s;
+    z-index: 10;
+  }
+
+  &__blog {
+    position: absolute;
+    top: 50px;
+    left: 510px;
+    background-color: $main;
+    border-radius: 15px;
+    padding: 20px 32px 15px 24px !important;
+    transform: translateY(-500%);
+    transition: all .3s;
+    z-index: 10;
+  }
+
+  &__school-title {
+    display: block;
+    @extend %roboto-700;
+    margin-bottom: 24px;
+    color: #fff;
+  }
+
   &__about {
     position: absolute;
     top: 50px;
@@ -153,7 +196,10 @@
     z-index: 10;
   }
 
-  &__about--active {
+  &__about--active,
+  &__school--active,
+  &__services--active,
+  &__blog--active {
     transform: translateY(0);
     transition: all .3s;
   }
@@ -179,6 +225,14 @@
     gap: 48px;
     position: relative;
 
+  }
+
+  &__menu-link--active {
+    background-color: $main;
+    color: white;
+    padding: 7px 20px;
+    border-radius: 25px;
+    transition: all .3s;
   }
 
   &__menu-link {
@@ -241,6 +295,7 @@
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center;
+  margin-bottom: 140px;
 
   &__inner {
     padding-top: 333px;
@@ -286,7 +341,75 @@
 
 
 
+.metrica {
+  &__title {
+    margin-bottom: 25px;
+  }
 
+  &__text {
+    width: 400px;
+    margin-bottom: 35px;
+    line-height: 21px;
+  }
+ &__content{
+  display: flex;
+  align-items: end;
+  gap: 60px;
+ }
+ &__info{
+  display: grid;
+  grid-template-columns: repeat(3,1fr);
+  grid-gap:  32px 24px;
+ }
+  &__item {
+    width: 200px;
+    border-radius: 16px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    color: #fff;
+
+  }
+  &__item-img{
+    padding-top: 25px;
+    margin-bottom: 25px;
+  }
+  &__item-title{
+    margin-bottom: 20px;
+    @extend %impact;
+    font-size: 48px;
+    text-align: center;
+    
+  }
+&__item-text{
+  width: 135px;
+  text-align: center;
+  margin-bottom: 35px;
+}
+  &__item-pink {
+    background-color: #FB7C84;
+  }
+
+  &__item-orange {
+  background-color: #FFB865;
+  }
+
+  &__item-salt {
+    background-color: #D4EE47;
+  }
+
+  &__item-green {
+    background-color: #6ED6A4;
+  }
+
+  &__item-perple {
+    background-color: #883CDA;
+  }
+
+  &__item-blue {
+    background-color: #5AC4FF;
+  }
+}
 
 
 
