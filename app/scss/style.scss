@@ -679,7 +679,32 @@
 }
 
 
-
+.info{
+  &__title{
+    margin-bottom: 55px;
+  }
+  &__item{
+    padding-left: 30px;
+    border-radius: 35px;
+    box-shadow: -8px 10px 23px 0px #F1F1F1, 8px -10px 23px 0px #F1F1F1;
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 25px;
+  }
+  &__item-title,
+  &__text{
+    padding-top: 30px;
+  }
+  &__item-title{
+    font-size: 26px;
+    @extend %roboto-500;
+    width: 400px;
+  }
+  &__text{
+    width: 490px;
+    line-height: 21px;
+  }
+}
 
 
 
